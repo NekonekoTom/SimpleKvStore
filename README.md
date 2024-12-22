@@ -1,30 +1,30 @@
 # **Overview**
-**TomCatDB is a simple K-V database based on LSM-Tree.**
+**SimpleKvStore is a simple K-V database based on LSM-Tree.**
 
 # **Features**
-- Simple interface. The TomCatDB includes simple interfaces, such as `Insert`, `Delete`, `Get` and `ContainsKey`, provided by `class TCDB`. For more details, see [TomCatDB-doc]().
+- Simple interface. The SimpleKvStore includes simple interfaces, such as `Insert`, `Delete`, `Get` and `ContainsKey`, provided by `class TCDB`. For more details, see [SimpleKvStore-doc]().
 - Clear structure and good coding style. This project mostly follows [Google C++ style](https://google.github.io/styleguide/cppguide.html), and has detailed comments. All modules are well organized that you can replace any of them without making significant changes to the project.
 - Easy to use. The users can run a database by specifying a `Config` object and then create a `TCDB` instance by passing the object as the construction function's parameter.
 
 # **Limitations**
-- The TomCatDB works only on Linux.
+- The SimpleKvStore works only on Linux.
 - Multithread operations are not supported yet for the current version.
 
 # **Getting the source**
-Get the debug version of TomCatDB by running command:
+Get the debug version of SimpleKvStore by running command:
 ```
-git clone -b debug https://github.com/NekonekoTom/TomCatDB.git
+git clone -b debug https://github.com/NekonekoTom/SimpleKvStore.git
 ```
 
 # **Building**
-TomCatDB can be build through `makefile`:
+SimpleKvStore can be build through `makefile`:
 ```
-cd TomCatDB
+cd SimpleKvStore
 make
 ```
 Then you can run `main.out` for test.
 
-TomCatDB provides two build pipelines.
+SimpleKvStore provides two build pipelines.
 - Build using CMake script (recommended)
 
   Run the bash script `build_debug.sh`.
@@ -45,7 +45,7 @@ TomCatDB provides two build pipelines.
 
 # **Performance**
 - Write performance:
-  When compiling with `-O2` optimization, TomCatDB's write performance is shown in the chart below.
+  When compiling with `-O2` optimization, SimpleKvStore's write performance is shown in the chart below.
   Sequential write:
   | Data scale | Write time (second) | Estimated QPS |
   | ---------- | ------------------- | ------------- |
